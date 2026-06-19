@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
-import { ref, computed } from 'vue';
+import {  computed } from 'vue';
 import { useFetchCountry } from '../composables/useFetchCountry';
 import chevronLeft from '/homeIcon/chevron-down.svg';
 import Loading from '../components/shared/Loading.vue';
