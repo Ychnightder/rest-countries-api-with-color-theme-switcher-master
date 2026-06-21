@@ -31,7 +31,7 @@ onMounted(() => {
 <template>
 	<button @click="toggleDarkMode" class="font-medium transition-all flex items-center   cursor-pointer" >
 		<img :src="isDark ? lightModeIcon : darkModeIcon" alt="Toggle Theme" :class=" isDark ? 'lightModeIcon' : 'darkModeIcon' " class="w-5 h-5" />
-		<span class="ml-2 ">{{ isDark ? 'Light' : 'Dark' }} Mode</span>
+		<span class="ml-2 hidden lg:block ">{{ isDark ? 'Light' : 'Dark' }} Mode</span>
 	</button>
 </template>
 

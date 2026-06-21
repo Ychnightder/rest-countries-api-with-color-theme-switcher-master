@@ -44,7 +44,7 @@ const borderCountries = computed(() => {
 </script>
 
 <template>
-	<div class="p-10 text-greyC-950 dark:text-whiteC lg:h-screen">
+	<div class="p-10 bg-whiteC dark:bg-blueC-950 text-greyC-950 dark:text-whiteC ">
 		<router-link to="/" class="pl-2 pr-5 py-2 bg-whiteC dark:bg-blueC-900 shadow-md rounded-md shadown-md inline-block mb-10 lg:ml-[40px]">
 			<img :src="chevronLeft" alt="Back" class="ml-0 inline-block w-4 h-4 rotate-90 dark:invert" />
 			Back
@@ -75,12 +75,12 @@ const borderCountries = computed(() => {
 					<div v-if="country.borders && country.borders.length > 0" class="flex flex-col lg:flex-row lg:items-center gap-4 mt-5">
 						<h2 class="font-semibold shrink-0">Border Countries:</h2>
 
-						<div class="flex flex-wrap lg:gap-2 ">
+						<div class="flex flex-wrap lg:gap-2 w-full  ">
 							<router-link
 								v-for="border in borderCountries.slice(0, MAX_BORDER_COUNTRIES)"
 								:key="border.code"
 								:to="{ name: 'Countrie', params: { id: border.slug } }"
-								class="lg:px-6 lg:py-1.5 px-2 py-2 bg-whiteC dark:bg-blueC-900 shadow-md rounded-sm text-sm text-greyC-950 dark:text-whiteC border border-gray-100 dark:border-transparent transition-transform hover:scale-105 mx-1">
+								class="lg:px-6 lg:py-1.5 	 bg-whiteC dark:bg-blueC-900 shadow-md rounded-sm text-sm text-greyC-950 dark:text-whiteC border border-gray-100 dark:border-transparent transition-transform hover:scale-105 mx-1">
 								{{ border.name }}
 							</router-link>
 						</div>
