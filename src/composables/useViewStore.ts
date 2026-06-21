@@ -1,6 +1,6 @@
 import { ref } from 'vue';
 
-export const showGlobe = ref(false);
+export const showGlobe = ref(true); // Initial state of the globe visibility
 
 export function toggleGlobe() {
 	showGlobe.value = !showGlobe.value;
