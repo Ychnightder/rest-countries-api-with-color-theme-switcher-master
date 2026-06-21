@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {ref } from 'vue';
 import worldSvg from '/homeIcon/globe.svg';
 import squareSvg from '/homeIcon/square.svg';
 import { showGlobe, toggleGlobe } from '../../composables/useViewStore';

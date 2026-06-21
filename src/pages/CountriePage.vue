@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router';
 import {  computed } from 'vue';
 import { useFetchCountry } from '../composables/useFetchCountry';
 import chevronLeft from '/homeIcon/chevron-down.svg';
-import Loading from '../components/shared/Loading.vue';
+import Loading from '../components/Shared/Loading.vue';
 
 const route = useRoute();
 const MAX_BORDER_COUNTRIES = 3; // Limite le nombre de pays frontaliers affichés
@@ -45,10 +45,16 @@ const borderCountries = computed(() => {
 
 <template>
 	<div class="p-10 bg-whiteC dark:bg-blueC-950 text-greyC-950 dark:text-whiteC ">
-		<router-link to="/" class="pl-2 pr-5 py-2 bg-whiteC dark:bg-blueC-900 shadow-md rounded-md shadown-md inline-block mb-10 lg:ml-[40px]">
+		<div class="flex flex-col lg:flex-row lg:items-center justify-between ">
+			<router-link to="/" class="pl-2 pr-5 py-2 bg-whiteC dark:bg-blueC-900 shadow-md rounded-md shadown-md inline-block mb-10 lg:ml-[40px]">
 			<img :src="chevronLeft" alt="Back" class="ml-0 inline-block w-4 h-4 rotate-90 dark:invert" />
 			Back
 		</router-link>
+
+		<router-link to="/Quiz" class="pl-2 pr-5 py-2  bg-whiteC dark:bg-blueC-900 shadow-md rounded-md shadown-md inline-block mb-10 lg:ml-[40px]">
+			Quizz
+		</router-link>
+		</div>
 
 		<div v-if="country" class="flex flex-col lg:flex-row lg:gap-20 lg:items-center">
 			<img :src="country.flags?.svg" :alt="country.name" class="w-full max-w-[660px] lg:ml-[40px]" />

@@ -2,13 +2,12 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
 import Globe from 'globe.gl';
-import { useFetchCountry } from '../../composables/useFetchCountry';
 
 const router = useRouter();
 const globeContainer = ref<HTMLElement | null>(null);
 let myGlobe: any = null;
 
-const { countries } = useFetchCountry();
+
 onMounted(async () => {
   if (!globeContainer.value) return;
 

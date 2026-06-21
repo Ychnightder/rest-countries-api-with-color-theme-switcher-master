@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import Searchbar from '../components/Home/Searchbar.vue';
 import SelectByRegion from '../components/Home/SelectByRegion.vue';
 import countriesMain from '../components/Home/CountriesMain.vue';
-import WorldGlobe from '../components/shared/WorldGlobe.vue';
+import WorldGlobe from '../components/World/WorldGlobe.vue';
 import { getGlobeState } from '../composables/useViewStore';
 
 

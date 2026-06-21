@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../pages/Home.vue';
 import CountriePage from '../pages/CountriePage.vue';
-
+import Quiz from '../pages/Quiz.vue';
 
 const routes = [
 	{
@@ -10,10 +10,15 @@ const routes = [
 		component: Home,
 	},
 	{
-		path: "/:id",
+		path: '/:id',
 		name: 'Countrie',
-		component : CountriePage
-	}
+		component: CountriePage,
+	},
+	{
+		path: '/quiz',
+		name: 'Quiz',
+		component: Quiz,
+	},
 ];
 
 
