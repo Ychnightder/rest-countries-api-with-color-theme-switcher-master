@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router';
 import {  computed } from 'vue';
 import { useFetchCountry } from '../composables/useFetchCountry';
 import chevronLeft from '/homeIcon/chevron-down.svg';
-import Loading from '../components/Shared/Loading.vue';
+import Loading from '../components/shared/Loading.vue';
 
 const route = useRoute();
 const MAX_BORDER_COUNTRIES = 3; // Limite le nombre de pays frontaliers affichés

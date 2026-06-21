@@ -2,7 +2,7 @@
 import Card from './Card.vue';
 import { useCountryFilter } from '../../composables/useCountryFilter';
 import { useFetchCountry } from '../../composables/useFetchCountry.ts'
-import Loading from '../Shared/Loading.vue';
+import Loading from '../shared/Loading.vue';
 
 const { countries, isLoading } = useFetchCountry();
 
